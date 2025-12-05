@@ -6,7 +6,7 @@ const PortfolioSlides = () => {
 
   const slides = [
     {
-      title: "Welcome to Web Development! 🌐",
+      title: "Welcome to Web Development! 🌐 BETA",
       content: (
         <div className="space-y-6">
           <p className="text-xl">Today you'll learn the basics of building websites</p>
