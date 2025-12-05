@@ -611,39 +611,6 @@ footer {
       )
     },
     {
-      title: "Resources 📚",
-      content: (
-        <div className="space-y-4">
-          <div className="bg-blue-50 p-6 rounded space-y-4">
-            <div>
-              <h3 className="font-bold text-lg mb-2">Learning Resources:</h3>
-              <ul className="space-y-2">
-                <li>📖 <a href="https://www.w3schools.com/html/" className="text-blue-600 underline">W3Schools HTML Tutorial</a></li>
-                <li>📖 <a href="https://www.w3schools.com/css/" className="text-blue-600 underline">W3Schools CSS Tutorial</a></li>
-                <li>🎮 <a href="https://flexboxfroggy.com/" className="text-blue-600 underline">Flexbox Froggy</a> - Learn flexbox through a game!</li>
-                <li>🎨 <a href="https://coolors.co/" className="text-blue-600 underline">Coolors</a> - Color palette generator</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-2">Accessibility:</h3>
-              <ul className="space-y-2">
-                <li>♿ <a href="https://webaim.org/resources/contrastchecker/" className="text-blue-600 underline">WebAIM Contrast Checker</a></li>
-                <li>♿ <a href="https://www.a11yproject.com/" className="text-blue-600 underline">The A11Y Project</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-bold text-lg mb-2">Tools:</h3>
-              <ul className="space-y-2">
-                <li>💻 VS Code - Text editor</li>
-                <li>🌐 Chrome DevTools - F12 to inspect</li>
-                <li>📱 Responsive Design Mode - Test mobile</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      )
-    },
-    {
       title: "Part 1 Checklist ✅",
       content: (
         <div className="space-y-4">
@@ -720,6 +687,188 @@ footer {
           </div>
           <div className="bg-green-100 p-4 rounded mt-6">
             <p className="text-center font-bold text-lg">Let's get started! 🎉</p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Git: Why Version Control 🧠",
+      content: (
+        <div className="space-y-4">
+          <p className="text-lg">Git is a time machine for your code: track changes, undo mistakes, and collaborate safely.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-blue-50 p-4 rounded">
+              <p className="font-bold mb-2">Checkpoints</p>
+              <p className="text-sm">Save milestones so you can always roll back.</p>
+            </div>
+            <div className="bg-green-50 p-4 rounded">
+              <p className="font-bold mb-2">Collaboration</p>
+              <p className="text-sm">Merge work from teammates without overwriting.</p>
+            </div>
+            <div className="bg-yellow-50 p-4 rounded">
+              <p className="font-bold mb-2">Confidence</p>
+              <p className="text-sm">Experiment in branches; keep main stable.</p>
+            </div>
+          </div>
+          <div className="bg-gray-50 p-4 rounded">
+            <p className="font-bold mb-1">Mental model:</p>
+            <p className="text-sm">Files → tracked by Git → commits = snapshots → push to GitHub as backup and collaboration hub.</p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Git Basics (Local) 💻",
+      content: (
+        <div className="space-y-4">
+          <p className="text-lg">Core commands you’ll use daily:</p>
+          <pre className="bg-gray-900 text-green-400 p-4 rounded text-sm overflow-x-auto">
+{`git init              # start tracking in this folder
+git status            # see what's changed
+git add .             # stage all changes
+git commit -m "msg"   # save a snapshot
+git log --oneline     # view history`}
+          </pre>
+          <div className="bg-blue-50 p-4 rounded space-y-2">
+            <p className="font-bold">Best practices:</p>
+            <ul className="list-disc ml-5 space-y-1 text-sm">
+              <li>Commit small, focused changes.</li>
+              <li>Write clear messages: <span className="font-mono">"Add homepage hero"</span>.</li>
+              <li>Check <span className="font-mono">git status</span> before committing.</li>
+            </ul>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "GitHub + Pushing ☁️",
+      content: (
+        <div className="space-y-4">
+          <p className="text-lg">Move your work to GitHub for backup and sharing.</p>
+          <ol className="list-decimal ml-6 space-y-2 text-sm">
+            <li>Create a GitHub repo (no README needed).</li>
+            <li>In your project: <span className="font-mono">git remote add origin https://github.com/you/repo.git</span></li>
+            <li>Push the first time: <span className="font-mono">git push -u origin main</span></li>
+            <li>After that: <span className="font-mono">git add . && git commit -m "msg" && git push</span></li>
+          </ol>
+          <div className="bg-yellow-50 p-4 rounded">
+            <p className="font-bold mb-1">Tips:</p>
+            <ul className="list-disc ml-5 space-y-1 text-sm">
+              <li>Add a <span className="font-mono">.gitignore</span> (e.g., <span className="font-mono">node_modules</span>, build outputs).</li>
+              <li>Never commit secrets (API keys, passwords).</li>
+              <li>Use branches for experiments; merge into <span className="font-mono">main</span> when stable.</li>
+            </ul>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Domains vs Hosting 🌐",
+      content: (
+        <div className="space-y-4">
+          <p className="text-lg">Two pieces to get your site live:</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-white border p-4 rounded">
+              <h4 className="font-bold mb-2">Domain = Address</h4>
+              <p className="text-sm mb-2">Example: <span className="font-mono">yourname.com</span></p>
+              <p className="text-sm">Buy from registrars (Namecheap, Google Domains).</p>
+            </div>
+            <div className="bg-white border p-4 rounded">
+              <h4 className="font-bold mb-2">Hosting = House</h4>
+              <p className="text-sm mb-2">Where your files live and are served.</p>
+              <p className="text-sm">Examples: GitHub Pages, Netlify, Vercel.</p>
+            </div>
+          </div>
+          <div className="bg-green-50 p-4 rounded">
+            <p className="font-bold mb-1">DNS connects them:</p>
+            <p className="text-sm">You point your domain’s DNS records to your hosting provider so visitors reach your site.</p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Publish Your Site 🚢",
+      content: (
+        <div className="space-y-4">
+          <p className="text-lg">Pick one fast path to go live:</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-blue-50 p-4 rounded">
+              <p className="font-bold mb-2">GitHub Pages</p>
+              <ul className="list-disc ml-5 space-y-1 text-sm">
+                <li>Push to GitHub.</li>
+                <li>Settings → Pages → Source: <span className="font-mono">main</span> → <span className="font-mono">/ (root)</span>.</li>
+              </ul>
+            </div>
+            <div className="bg-purple-50 p-4 rounded">
+              <p className="font-bold mb-2">Netlify</p>
+              <ul className="list-disc ml-5 space-y-1 text-sm">
+                <li>Drag-drop your folder or connect repo.</li>
+                <li>Auto HTTPS + previews.</li>
+              </ul>
+            </div>
+            <div className="bg-indigo-50 p-4 rounded">
+              <p className="font-bold mb-2">Vercel</p>
+              <ul className="list-disc ml-5 space-y-1 text-sm">
+                <li>Connect repo.</li>
+                <li>Deploy defaults to <span className="font-mono">main</span> branch.</li>
+              </ul>
+            </div>
+          </div>
+          <div className="bg-gray-50 p-4 rounded space-y-1 text-sm">
+            <p className="font-bold">Custom domain checklist:</p>
+            <p>1) Add domain in hosting dashboard</p>
+            <p>2) Update DNS at registrar (A or CNAME records)</p>
+            <p>3) Wait for propagation (can take minutes-hours)</p>
+            <p>4) Verify HTTPS works</p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Ship Checklist ✅",
+      content: (
+        <div className="space-y-4">
+          <p className="text-lg font-bold">Before you share the link:</p>
+          <div className="bg-green-50 p-6 rounded space-y-2 text-sm">
+            <p>☐ All nav links work and no 404s</p>
+            <p>☐ Looks good on mobile + desktop</p>
+            <p>☐ Images have alt text and load fast</p>
+            <p>☐ Contact info or socials present</p>
+            <p>☐ Commit and push latest changes to <span className="font-mono">main</span></p>
+            <p>☐ Deployed URL tested on your phone</p>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Resources 📚",
+      content: (
+        <div className="space-y-4">
+          <div className="bg-blue-50 p-6 rounded space-y-4">
+            <div>
+              <h3 className="font-bold text-lg mb-2">Learning Resources:</h3>
+              <ul className="space-y-2">
+                <li>📖 <a href="https://www.w3schools.com/html/" className="text-blue-600 underline">W3Schools HTML Tutorial</a></li>
+                <li>📖 <a href="https://www.w3schools.com/css/" className="text-blue-600 underline">W3Schools CSS Tutorial</a></li>
+                <li>🎮 <a href="https://flexboxfroggy.com/" className="text-blue-600 underline">Flexbox Froggy</a> - Learn flexbox through a game!</li>
+                <li>🎨 <a href="https://coolors.co/" className="text-blue-600 underline">Coolors</a> - Color palette generator</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-2">Accessibility:</h3>
+              <ul className="space-y-2">
+                <li>♿ <a href="https://webaim.org/resources/contrastchecker/" className="text-blue-600 underline">WebAIM Contrast Checker</a></li>
+                <li>♿ <a href="https://www.a11yproject.com/" className="text-blue-600 underline">The A11Y Project</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-bold text-lg mb-2">Tools:</h3>
+              <ul className="space-y-2">
+                <li>💻 VS Code - Text editor</li>
+                <li>🌐 Chrome DevTools - F12 to inspect</li>
+                <li>📱 Responsive Design Mode - Test mobile</li>
+              </ul>
+            </div>
           </div>
         </div>
       )
